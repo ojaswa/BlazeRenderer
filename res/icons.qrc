@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../icons/open_volume.png</file>
+        <file>../icons/save.png</file>
+        <file>../icons/TF1D.png</file>
+        <file>../icons/render_settings.png</file>
+        <file>../icons/update.png</file>
+        <file>../icons/screenshot.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,10 @@
+NRRD0002
+content: bonsai
+type: unsigned char
+dimension: 3
+sizes: 256 256 256
+spacings: 1 1 1
+data file: ./bonsai.raw
+encoding: raw
+source URL:=http://www.gris.uni-tuebingen.de/areas/scivis/volren/datasets/data/bonsai.raw.gz
+courtesy:=S. Roettger, VIS, University of Stuttgart

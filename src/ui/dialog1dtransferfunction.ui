@@ -2,7 +2,7 @@
 <!--
 ****************************************************************************
 **                                                                        **
-**  Blaze - a volume rendering and analytics program                      **
+**  BlazeRenderer - An OpenGL based real-time volume renderer             **
 **  Copyright (C) 2016-2018 Graphics Research Group, IIIT Delhi           **
 **                                                                        **
 **  This program is free software: you can redistribute it and/or modify  **

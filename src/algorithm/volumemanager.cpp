@@ -102,7 +102,6 @@ void VolumeManager::readNHDR(const char *filename)
     int vol_typeSize;
     char datafilename[256];
     if(fid) {
-        pathNameFile<<filename<<"\n";
         while (getline(fid, line)) {
             if (strncmp(line.c_str(), "encoding", 8) == 0) {
                 //Has to be raw
@@ -119,15 +118,12 @@ void VolumeManager::readNHDR(const char *filename)
                 sscanf(line.c_str(), "type: %[^\n\r]\n", type_str);
                 if (strncmp(type_str, "unsigned char", 13) == 0){
                     vol_typeSize = 1;
-                    pathNameFile<<vol_typeSize;
                 }
                 else if (strncmp(type_str, "unsigned short", 14) == 0){
                     vol_typeSize = 2;
-                    pathNameFile<<vol_typeSize;
                 }
                 else {
                     fprintf(stderr, "Unknown data type: %s\n", type_str);
-                    pathNameFile.close();
                     fid.close();
                     return;
                 }
@@ -149,7 +145,6 @@ void VolumeManager::readNHDR(const char *filename)
             linecount++;
         }
     }
-    pathNameFile.close();
     fid.close();
 
     //Load data from binary raw file

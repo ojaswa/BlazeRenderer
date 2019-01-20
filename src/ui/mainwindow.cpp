@@ -181,5 +181,10 @@ void MainWindow::on_actionSave_screenshot_triggered()
 void MainWindow::on_actionAbout_triggered()
 {
     QMessageBox::about(this, tr("About BlazeRenderer"),
-            tr("BlazeRenderer: a real-time high quality GPU volume renderer\n\nVersion 2.0\n\nCopyright \u00A9 2016-2018 Graphics Research Group\nIIIT Delhi"));
+             tr(   "<p style=\"text-align: center;font-size: 20px\"><strong>BlazeRenderer</strong></p>"
+                   "<span style=\"font-weight:normal; text-align: center\">OpenGL based real-time volume renderer</span><br><br>"
+                   "<span style=\"font-weight:normal; text-align: center\">Version 2.0</span><br><br>"
+                   "<span style=\"font-weight:normal; text-align: center\">Copyright \u00A9 2016-2018 Graphics Research Group</span><br>"
+                   "<span style=\"font-weight:normal; text-align: center\">IIIT Delhi</span>"
+               ));
 }

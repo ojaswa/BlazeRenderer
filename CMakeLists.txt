@@ -58,6 +58,7 @@ target_include_directories(${TARGET} PRIVATE
 	${PROJECT_SOURCE_DIR}/src 
 	${PROJECT_SOURCE_DIR}/depends/qcustomplot 
 	${PROJECT_SOURCE_DIR}/depends/OpenGL
+	${CMAKE_CURRENT_BINARY_DIR}
 	)
 qt5_use_modules(${TARGET} Widgets Concurrent OpenGL PrintSupport)
 target_link_libraries(${TARGET} ${ITK_LIBRARIES} ${VTK_LIBRARIES} ${OPENGL_LIBRARIES})

@@ -169,7 +169,7 @@ void MainWindow::on_actionSave_screenshot_triggered()
 {
     QString filename = QFileDialog::getSaveFileName(this,
                                             tr("Save volume render"), QCoreApplication::applicationDirPath(),
-                                            tr("PNG (*.png)"));
+                                            tr("PNG (*.png)"), 0, QFileDialog::DontUseNativeDialog);
     if(filename.isEmpty() || filename.isNull())
         return;
     QFileInfo fi(filename);

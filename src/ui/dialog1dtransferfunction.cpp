@@ -148,7 +148,7 @@ void Dialog1DTransferFunction::createColorItem(double key, QColor color)
 void Dialog1DTransferFunction::itemDoubleClicked(QCPAbstractItem* item, QMouseEvent* event)
 {
     //Bring up the color selection dialogBox
-    QColor color = QColorDialog::getColor(((QCPItemTracer*)item)->brush().color(), this);
+    QColor color = QColorDialog::getColor(((QCPItemTracer*)item)->brush().color(), this, "Pick a color", QColorDialog::DontUseNativeDialog);
     if(color.isValid()) { //Set this to the color of the node
         ((QCPItemTracer*)item)->setBrush(QBrush(color));
     }
@@ -417,7 +417,7 @@ float* Dialog1DTransferFunction::createAutoAlpha()
 void Dialog1DTransferFunction::loadTF()
 {
     QString filename = QFileDialog::getOpenFileName(this, tr("Load 1D TF"),
-                                                    QDir::currentPath(), "1D Color Transfer Function (*.tf1)");
+                                                    QDir::currentPath(), "1D Color Transfer Function (*.tf1)", 0, QFileDialog::DontUseNativeDialog);
     if(filename.isEmpty()) return;
 
     QFile file(filename);
@@ -486,7 +486,7 @@ void Dialog1DTransferFunction::loadTF()
 void Dialog1DTransferFunction::saveTF()
 {
     QString filename = QFileDialog::getSaveFileName(this, tr("Save 1D TF"),
-                                         QDir::currentPath(), "1D Color Transfer Function (*.tf1)");
+                                         QDir::currentPath(), "1D Color Transfer Function (*.tf1)", 0, QFileDialog::DontUseNativeDialog);
     if(filename.isEmpty()) return;
 
     QSharedPointer<QCPGraphDataContainer> colorData = ui->customPlot->graph(1)->data();
